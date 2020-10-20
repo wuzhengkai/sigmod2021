@@ -1,0 +1,1041 @@
+﻿[
+	{
+		"Name": "Testcase 1",
+		"Query": "plot mean mpg and model_year for all cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2",
+		"Query": "plot lineplot average mpg by model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.plot(df_tt[\"model_year\"], df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3",
+		"Query": "plot mean mpg and cylinders by origin",
+		"Output": "df_tt = df.groupby(['origin','cylinders']).mean().groupby(['origin'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"cylinders\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('cylinders')\nplt.ylabel('mean mpg')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4",
+		"Query": "bar chart that shows cylinders on x-axis and frequency on y-axis",
+		"Output": "plt.hist(df[\"cylinders\"])\nplt.xlabel('cylinders')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 5",
+		"Query": "scatter plot shows mpg in the y axis and cylinders in x axis",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 6",
+		"Query": "scatter plot shows mpg in the y axis and cylinders in x axis in log-log scale",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Unsupported",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 7",
+		"Query": "histogram shows distribution of the number of horsepower",
+		"Output": "plt.hist(df[\"horsepower\"])\nplt.xlabel('horsepower')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 8",
+		"Query": "pie chart that shows percentage of different origins",
+		"Output": "plt.hist(df[\"origin\"])\nplt.xlabel('origin')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Unsupported",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 9",
+		"Query": "the distribution of mpg by each automobile",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 10",
+		"Query": "show average mpg from model year 75 to 79.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Somehow Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 11",
+		"Query": "show average mpg and acceleration by model year.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().groupby(['model_year'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.plot(df_tt2[\"mpg\"], df_tt2[\"acceleration\"], label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\nplt.legend(title='model_year')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Incorrect",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 12",
+		"Query": "line plot of mpg and model year, with each color denoting different cylinders.",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Incorrect",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 13",
+		"Query": "scatter of mpg and model year, with each color denoting different cylinders.",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Somehow Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 14",
+		"Query": "pie chart that each slice shows a particular cylinder.",
+		"Output": "plt.hist(df[\"cylinders\"])\nplt.xlabel('cylinders')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Unsupported",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 15",
+		"Query": "show a probabilitic distribution of mpg.",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 16",
+		"Query": "plot a bar chart of cylinders of automobile.",
+		"Output": "plt.hist(df[\"cylinders\"])\nplt.xlabel('cylinders')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 17",
+		"Query": "plot the count of model years.",
+		"Output": "plt.hist(df[\"model_year\"])\nplt.xlabel('model_year')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 18",
+		"Query": "plot a bar chart of cylinders when model year equals 80.",
+		"Output": "df_t = df.loc[df[\"model_year\"] == 80]\nplt.hist(df_t[\"cylinders\"], alpha=0.5, label='80')\nplt.xlabel('cylinders')\nplt.ylabel('Frequency')\nplt.legend(title='model_year')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 19",
+		"Query": "plot the yearly trend of average mpg",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Incorrect",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 20",
+		"Query": "plot the trend of average mpg by model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().groupby(['model_year'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.hist(df_tt2[\"mpg\"], alpha=0.5, label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('mean Frequency')\nplt.legend(title='model_year')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Somehow Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 21",
+		"Query": "plot the boxplot of mpg and model year",
+		"Output": "plt.scatter(x=df[\"model_year\"], y=df[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Unsupported",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 22",
+		"Query": "calculate and plot mean cylinders by origin",
+		"Output": "df_tt = df.groupby(['origin']).mean().groupby(['origin'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.hist(df_tt2[\"cylinders\"], alpha=0.5, label=str(cc))\nplt.xlabel('cylinders')\nplt.ylabel('mean Frequency')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Somehow Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 23",
+		"Query": "Create histogram of mpg where origin equal 1",
+		"Output": "df_t = df.loc[df[\"origin\"] == 1]\nplt.hist(df_t[\"mpg\"], alpha=0.5, label='1')\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 24",
+		"Query": "Create histogram of mpg where origin equal 1; plot mpg where origin equal 2",
+		"Output": "df_t = df.loc[df[\"origin\"] == 1]\nplt.hist(df_t[\"mpg\"], alpha=0.5, label='1')\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\nplt.legend(title='origin')\n\ndf_t = df.loc[df[\"origin\"] == 2]\nplt.hist(df_t[\"mpg\"], alpha=0.5, label='2')\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"ResultCategory":  "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 25",
+		"Query": "Create histogram of mpg where origin equal 1 and equal 2",
+		"Output": "df_t0 = df.loc[df[\"origin\"] == 1]\nplt.hist(df_t0[\"mpg\"], alpha=0.5, label='1')\ndf_t1 = df.loc[df[\"origin\"] == 2]\nplt.hist(df_t1[\"mpg\"], alpha=0.5, label='2')\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 26",
+		"Query": "plot the line plot of average mpg by model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.plot(df_tt[\"model_year\"], df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"Dataframe": "df",
+		"ResultCategory": "Correct",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+]

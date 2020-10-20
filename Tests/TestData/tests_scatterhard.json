@@ -1,0 +1,2464 @@
+﻿[
+	{
+		"Name": "Testcase 1_01",
+		"Query": "plot mpg versus acceleration, showing entries with = 4 and = 6 cylinders.",
+		"Output": "plt.hist([df[\"mpg\"],df[\"acceleration\"],df[\"cylinders\"]], label=['mpg','acceleration','cylinders'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_02",
+		"Query": "scatter plot of mpg by acceleration (orange for = 6 cylinders and blue for = 4 cylinders) ",
+		"Output": "df_tt = df.groupby(['acceleration']).mean().reset_index()\nplt.scatter(x=df_tt[\"acceleration\"], y=df_tt[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Incorrect",
+		"IgnoredReason": "Error",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_04",
+		"Query": "scatter plot acceleration against mpg with blue color for = 4 cylinders and orange for = 6 cylinders",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"], c='b')\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_05",
+		"Query": "for each mpg and acceleration, plot a point for = 4 cylinders, color blue for = 6 cylinders, color is orange.  ",
+		"Output": "df_tt = df.groupby(['mpg']).mean().reset_index()\nplt.scatter(x=df_tt[\"mpg\"], y=df_tt[\"acceleration\"], c='b')\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_06",
+		"Query": "Scatter plot of acceleration vs mpg for cylinders = 4 and = 6  ",
+		"Output": "df_t0 = df.loc[df[\"cylinders\"] == 4]\nplt.scatter(x=df_t0[\"acceleration\"], y=df_t0[\"mpg\"], label='4')\ndf_t1 = df.loc[df[\"cylinders\"] == 6]\nplt.scatter(x=df_t1[\"acceleration\"], y=df_t1[\"mpg\"], label='6')\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_07",
+		"Query": "Scatter plot of acceleration against mpg differently for = 4 or = 6 cylinder cases.",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_08",
+		"Query": "Show a scatterplot of mpg vs acceleration for cylinders = 4 in blue and cylinders = 6 in orange.",
+		"Output": "df_t0 = df.loc[df[\"cylinders\"] == 4]\nplt.scatter(x=df_t0[\"cylinders\"], y=df_t0[\"acceleration\"], c='b', label='4')\ndf_t1 = df.loc[df[\"cylinders\"] == 6]\nplt.scatter(x=df_t1[\"cylinders\"], y=df_t1[\"acceleration\"], c='b', label='6')\nplt.xlabel('cylinders')\nplt.ylabel('acceleration')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_09",
+		"Query": "plot scatter of mpg and acceleration and group by cylinders = 4 and = 6",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"mpg\"], y=df_tt2[\"acceleration\"], label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_10",
+		"Query": "plot scatter of mpg and acceleration, group by cylinders = 4 and = 6",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"mpg\"], y=df_tt2[\"acceleration\"], label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_11",
+		"Query": "for each cylinder point mpg acceleration",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"mpg\"], y=df_tt2[\"acceleration\"], label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_12",
+		"Query": "scatterplot of MPG vs. acceleration with points different colors based on cylinders = 4 and = 6",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_13",
+		"Query": "scatter acceleration vs. mpg for each cylinder = 4 and = 6",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"acceleration\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('acceleration')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_14",
+		"Query": "scatter of acceleration and mpg for cylinders",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_15",
+		"Query": "points acceleration against mpg for = 4 cylinders and = 6 cylinders",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_16",
+		"Query": "Scatterplot of accerlation vs mpg, colored by number of cylinders",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().reset_index()\nplt.scatter(x=df_tt[\"cylinders\"], y=df_tt[\"acceleration\"])\nplt.xlabel('cylinders')\nplt.ylabel('mean acceleration')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_01",
+		"Query": "plot model year versus average mpg.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_02",
+		"Query": "scatter plot of model year by average mpg ",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_04",
+		"Query": "scatter plot average mpg by model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_05",
+		"Query": "for each model year and average mpg, plot a point  ",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_06",
+		"Query": "Plot average mpg for each year",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_07",
+		"Query": "Scatter plot of average mpg against model year.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_08",
+		"Query": "Show a scatterplot of model_year vs average mpg per model_year.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_09",
+		"Query": "plot scatter of model_year and average mpg",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_10",
+		"Query": "plot scatter of model_year and average of mpg",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_11",
+		"Query": "scatter model year average mpg",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_12",
+		"Query": "scatterplot of model year vs. average mpg",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_13",
+		"Query": "scatter average mpg for each model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_14",
+		"Query": "scatter of average mpg and model year ",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_15",
+		"Query": "points average mpg against model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_16",
+		"Query": "Scatterplot of average MPG vs model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_01",
+		"Query": "plot model year versus average mpg for cylinders = 4 and cylinders = 6",
+		"Output": "df_t0 = df.loc[df[\"cylinders\"] == 4]\nplt.hist([df_t0[\"model_year\"],df_t0[\"mpg\"],df_t0[\"cylinders\"]], alpha=0.5, label=[''4'; model_year',''4'; mpg',''4'; cylinders'])\ndf_t1 = df.loc[df[\"cylinders\"] == 6]\nplt.hist([df_t1[\"model_year\"],df_t1[\"mpg\"],df_t1[\"cylinders\"]], alpha=0.5, label=[''6'; model_year',''6'; mpg',''6'; cylinders'])\nplt.ylabel('Frequency')\nplt.legend(title='cylinders; column')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_02",
+		"Query": "scatter plot of model year by average mpg for cylinders = 4 and = 6",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\ndf_t0 = df_tt.loc[df_tt[\"cylinders\"] == 4]\nplt.scatter(x=df_t0[\"model_year\"], y=df_t0[\"mpg\"], label='4')\ndf_t1 = df_tt.loc[df_tt[\"cylinders\"] == 6]\nplt.scatter(x=df_t1[\"model_year\"], y=df_t1[\"mpg\"], label='6')\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_04",
+		"Query": "partition data by cylinders and then scatter plot average mpg by model year for = 4 cylinders and then for = 6 cylinders different color ",
+		"Output": "df_tt = df.groupby(['cylinders', 'model_year']).mean().groupby(['cylinders', 'model_year'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"cylinders\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('cylinders')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders, model_year')\n",
+		"ResultCategory": "Incorrect",
+		"IgnoredReason": "Took 20 secs, and results incorrect",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_05",
+		"Query": "for each model year and average mpg, plot a point. color the point with blue if = 4 cylinders. if = 6 cylinders, color is orange.",
+		"Output": "df_tt = df.groupby(['model_year','cylinders']).mean().groupby(['model_year'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"cylinders\"], y=df_tt2[\"mpg\"], c='b', label=str(cc))\nplt.xlabel('cylinders')\nplt.ylabel('mean mpg')\nplt.legend(title='model_year')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_06",
+		"Query": "Plot average mpg for each year for = 4 and = 6 cylinders ",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().reset_index()\nplt.scatter(x=df_tt[\"cylinders\"], y=df_tt[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 3_07",
+		"Query": "Scatter plot of average mpg against model year. colour dots differently based on whether it = 4 or = 6 cylinders.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 3_08",
+		"Query": "Show a scatterplot of model_year vs average mpg per model_year, for cylinders = 4 in blue and cylinders = 6 in orange.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\ndf_t0 = df_tt.loc[df_tt[\"cylinders\"] == 4]\nplt.scatter(x=df_t0[\"model_year\"], y=df_t0[\"mpg\"], c='b', label='4')\ndf_t1 = df_tt.loc[df_tt[\"cylinders\"] == 6]\nplt.scatter(x=df_t1[\"model_year\"], y=df_t1[\"mpg\"], c='b', label='6')\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_09",
+		"Query": "plot scatter of model_year and average mpg, and group by cylinders = 4 and = 6",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_10",
+		"Query": "plot scatter of model_year and average of mpg, group by cylinders = 4 and = 6",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_11",
+		"Query": "scatter model year average mpg for cylinder = 4, = 6",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\ndf_t0 = df_tt.loc[df_tt[\"cylinders\"] == 4]\nplt.scatter(x=df_t0[\"model_year\"], y=df_t0[\"mpg\"], label='4')\ndf_t1 = df_tt.loc[df_tt[\"cylinders\"] == 6]\nplt.scatter(x=df_t1[\"model_year\"], y=df_t1[\"mpg\"], label='6')\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_12",
+		"Query": "scatterplot of model year vs. average mpg grouped by cylinders filtered to = 4 or = 6",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_13",
+		"Query": "scatter average mpg vs. model year for each cylinder = 4 and = 6",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_14",
+		"Query": "scatter of average mpg and model year for cylinders = 4 and = 6",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\ndf_t0 = df_tt.loc[df_tt[\"cylinders\"] == 4]\nplt.scatter(x=df_t0[\"model_year\"], y=df_t0[\"mpg\"], label='4')\ndf_t1 = df_tt.loc[df_tt[\"cylinders\"] == 6]\nplt.scatter(x=df_t1[\"model_year\"], y=df_t1[\"mpg\"], label='6')\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_15",
+		"Query": "points average mpg against model year for = 4 cylinders and = 6 cylinders",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_16",
+		"Query": "Scatterplot of average MPG vs model year, grouped by cylinders, = 4 and = 6 cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 4_01",
+		"Query": "plot model year versus average mpg. color each point by cylinder.",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"cylinders\"])\nplt.xlabel('model_year')\nplt.ylabel('mean cylinders')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_02",
+		"Query": "scatter plot of model year by average mpg for every cylinders 3 to 8 ",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_04",
+		"Query": "scatter plot average mpg by model year grouped by cylinders ",
+		"Output": "df_tt = df.groupby(['model_year', 'cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_05",
+		"Query": "for each cylinder, plot a point. x axis of the point is model year, and y axis is average mpg. the colors for 3,4,5,6,8 cylinders are blue, orange, green, brown, and gray.  ",
+		"Output": "df_tt = df.groupby(['mpg']).mean().reset_index()\nplt.scatter(x=df_tt[\"mpg\"], y=df_tt[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\n",
+		"ResultCategory": "Incorrect",
+		"IgnoredReason": "Timeout",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_06",
+		"Query": "Plot average mpg over the model years for each cylinder",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 4_07",
+		"Query": "Scatter plot of average mpg against model year. Please colour dots differently based on the number of cylinders.",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 4_08",
+		"Query": "Show a scatterplot of model_year vs average mpg per model_year, grouped by cylinders, for cylinders=3 through 8.",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_09",
+		"Query": "plot scatter of model_year and average mpg, and group by cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_10",
+		"Query": "plot scatter of model_year and average of mpg, group by cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_11",
+		"Query": "scatter model year average mpg for each cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_12",
+		"Query": "scatterplot of model year vs. average mpg grouped by cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_13",
+		"Query": "scatter average mpg vs. model year for each cylinder",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_14",
+		"Query": "scatter of average mpg and model year for each cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_15",
+		"Query": "points average mpg against model year for 3 to 8 cylinders",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.scatter(x=df_tt[\"model_year\"], y=df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_16",
+		"Query": "Scatterplot of average MPG vs model year, grouped by cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+]

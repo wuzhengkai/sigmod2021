@@ -1,0 +1,313 @@
+﻿[
+	{
+		"Name": "Testcase 1",
+		"Query": "plot mean mpg and model_year for all cylinders",
+		"Output": "df_tt = df.groupby(['cylinders','model_year']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"model_year\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2",
+		"Query": "plot lineplot average mpg by model year",
+		"Output": "df_tt = df.groupby(['model_year']).mean().reset_index()\nplt.plot(df_tt[\"model_year\"], df_tt[\"mpg\"])\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\n",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3",
+		"Query": "plot mean mpg and cylinders by origin",
+		"Output": "df_tt = df.groupby(['origin','cylinders']).mean().groupby(['origin'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"cylinders\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('cylinders')\nplt.ylabel('mean mpg')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4",
+		"Query": "overview",
+		"Output": "df.profile_report()",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 5",
+		"Query": "",
+		"Output": "df.profile_report()",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 6",
+		"Query": "plot mpg step 5",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 5))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 7",
+		"Query": "plot origin by mpg",
+		"Output": "df_tt = df.groupby(['origin'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.hist(df_tt2[\"mpg\"], alpha=0.5, label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 8",
+		"Query": "line average mpg by model year for each origin",
+		"Output": "df_tt = df.groupby(['model_year', 'origin']).mean().groupby(['origin'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.plot(df_tt2[\"model_year\"], df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('model_year')\nplt.ylabel('mean mpg')\nplt.legend(title='origin')\n",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+]

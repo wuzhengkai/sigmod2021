@@ -1,0 +1,6 @@
+D:\msr\visualize\Visualization\obj\Debug\Microsoft.ProgramSynthesis.Visualization.csprojAssemblyReference.cache
+D:\msr\visualize\Visualization\obj\Debug\Microsoft.ProgramSynthesis.Visualization.csproj.CoreCompileInputs.cache
+D:\msr\visualize\Visualization\bin\Debug\ClassLibrary.dll
+D:\msr\visualize\Visualization\bin\Debug\ClassLibrary.pdb
+D:\msr\visualize\Visualization\obj\Debug\ClassLibrary.dll
+D:\msr\visualize\Visualization\obj\Debug\ClassLibrary.pdb

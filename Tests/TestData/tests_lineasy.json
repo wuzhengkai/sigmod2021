@@ -1,0 +1,1352 @@
+﻿[
+	{
+		"Name": "Testcase 1_01",
+		"Query": "line plot of weight and mpg",
+		"Output": "plt.plot(df[\"weight\"], df[\"mpg\"])\nplt.xlabel('weight')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_03",
+		"Query": "plot mpg against weight using a line to connect points",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_04",
+		"Query": "plot mpg vs weight",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+			{
+		"Name": "Testcase 1_05",
+		"Query": "show a point for weight (x-axis) and mpg (y-axis). connect every two ajacent points with a straight line. ",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Incorrect",
+		"IgnoredReason": "Error",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_06",
+		"Query": "Please show me a line plot of mpg against weight",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_07",
+		"Query": "Show a line plot of weight vs mpg.",
+		"Output": "plt.plot(df[\"weight\"], df[\"mpg\"])\nplt.xlabel('weight')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_08",
+		"Query": "plot line of weight and mpg.",
+		"Output": "plt.plot(df[\"weight\"], df[\"mpg\"])\nplt.xlabel('weight')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_09",
+		"Query": "plot line of weight and mpg.",
+		"Output": "plt.plot(df[\"weight\"], df[\"mpg\"])\nplt.xlabel('weight')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_10",
+		"Query": "line weight mpg.",
+		"Output": "plt.plot(df[\"weight\"], df[\"mpg\"])\nplt.xlabel('weight')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_11",
+		"Query": "Line Plot mpg vs weight.",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_12",
+		"Query": "lineplot of weight vs. mpg.",
+		"Output": "plt.plot(df[\"weight\"], df[\"mpg\"])\nplt.xlabel('weight')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_13",
+		"Query": "line mpg against weight.",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_14",
+		"Query": "line chart of mpg and weight.",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_15",
+		"Query": "line mpg weight.",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_16",
+		"Query": "line plot of mpg vs weight.",
+		"Output": "plt.plot(df[\"mpg\"], df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_01",
+		"Query": "scatter plot of weight and mpg with regression line",
+		"Output": "sns.lmplot(x='weight',y='mpg', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_03",
+		"Query": "scatter plot mpg vs weight and also show the best linear approximation",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_04",
+		"Query": "plot a point of weight and mpg and fit a line based on these points.",
+		"Output": "sns.lmplot(x='weight',y='mpg', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+			{
+		"Name": "Testcase 2_05",
+		"Query": "plot mpg vs weight with a regression line",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_06",
+		"Query": "show me a scatter plot of mpg against weight and also show the regression line. ",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_07",
+		"Query": "Show a scatterplot of weight vs mpg and linear regression line with error.",
+		"Output": "sns.lmplot(x='weight',y='mpg', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_08",
+		"Query": "plot scatter of weight and mpg with best linear fit line.",
+		"Output": "sns.lmplot(x='weight',y='mpg', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_09",
+		"Query": "plot scatter of weight and mpg with linear trend line.",
+		"Output": "sns.lmplot(x='weight',y='mpg', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_10",
+		"Query": "point regression line mpg and weight.",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_11",
+		"Query": "Scatter Plot mpg vs weight with a trend line.",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_12",
+		"Query": "scatterplot of weight vs. mpg with trend line.",
+		"Output": "sns.lmplot(x='weight',y='mpg', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_13",
+		"Query": "lmplot mpg against weight.",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_14",
+		"Query": "regression line and points of mpg and weight.",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_15",
+		"Query": "points and line mpg weight.",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"weight\"])\nplt.xlabel('mpg')\nplt.ylabel('weight')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_16",
+		"Query": "scatterplot of mpg vs weight with a line of best fit.",
+		"Output": "sns.lmplot(x='mpg',y='weight', data=df)\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration",
+			"weight"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64",
+			"int64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0",
+			"1410"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8",
+			"5260"
+		]
+	},
+]

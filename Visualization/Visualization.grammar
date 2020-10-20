@@ -1,0 +1,129 @@
+﻿Root				:=  Histogram
+					| Scatter
+					| LinePlot;
+
+Histogram			:=  HistogramElements;
+HistogramElements	:=  HistogramElement HistogramElements?;
+
+HistogramElement	:=  HistogramType { type : histogram } 
+					| Column
+					| Bins { histobins : true }
+					| Stack { histostack : true }
+					| Log { histolog : true }
+					| Density { histodens : true }
+					| FilterElement
+					| GroupElement;
+
+HistogramType		:= "histogram" 
+					| "histo"
+					| "distribut"
+					| "frequenc"
+					| "bar" { histobar : true }
+					| DensityPlotType { histodens : true };
+
+DensityPlotType		:= "densiti" "plot";
+
+Bins				:= BinSize Bin? { bin_single : $0.Value }
+					| Bin? BinSize { bin_single : $1.Value }
+					| Bin? BinPair
+					| Width? BinWidth { bin_pair_step : $1.Value }
+					| BinWidth Width? { bin_pair_step : $0.Value };
+
+Bin					:= "bin" | "bar" | "rang" | "categori";
+Width				:= "width" | "step" | "every" | "size";
+
+BinWidth			:= $number;
+BinSize				:= $number
+					| $number_list;
+
+BinPair				:= BinPairBody BinPairStep?;
+BinPairBody			:= BinPairFirst BinPairRest;
+BinPairFirst		:= "from"? $number { bin_pair_first : $1.Value }
+					| "between"? $number { bin_pair_first : $1.Value };
+BinPairRest			:= "to"? $number { bin_pair_second : $1.Value };
+BinPairStep			:= Width? $number { bin_pair_step : $1.Value }
+					| $number Width? { bin_pair_step : $0.Value };
+
+Stack				:= "stack" | "stacked";
+Log					:= "log" | "logarithm" | "logscal" | "log-scal";
+Density				:= "densiti" | "normal" | "norm";
+
+Scatter				:= ScatterElements;
+ScatterElements		:= ScatterElement ScatterElements?;
+ScatterElement		:= ScatterType { type : scatter }
+					| MarkerElements { scattermarker : true }
+					| ColorElements { scattercolor : true }
+					| Column
+					| FilterElement
+					| GroupElement
+					| Regression { regress : true };
+
+ScatterType			:= "scatter"
+					| "point"
+					| "dot"
+					| "scatterplot"
+					| "scattergram";
+
+MarkerElements		:= MarkerSize MarkerS { marker : $0.Value }
+					| MarkerS MarkerSize { marker : $1.Value }
+					| MarkerS AuxColumn { marker_col : $1.Value }
+					| AuxColumn MarkerS { marker_col : $0.Value };
+
+MarkerSize			:= $number;
+MarkerS				:= "point" "size" | Marker;
+
+ColorElements		:= PreColors { color : $0.Value }
+					| ColorType AuxColumn { color_col : $1.Value }
+					| AuxColumn ColorType { color_col : $0.Value };
+
+LinePlot			:= LinePlotElements;
+LinePlotElements	:= LinePlotElement LinePlotElements?;
+
+LinePlotElement		:= LinePlotType { type : lineplot }
+					| Column
+					| LinePlotFormat
+					| FilterElement
+					| GroupElement
+					| Regression { regress : true };
+
+LinePlotFormat		:= PreColors
+					| MarkerType Marker? { type : lineplot }
+					| LineType Line? { type : lineplot };
+
+LinePlotType		:= "line"
+					| "lineplot";
+
+Regression			:= "regress" | "fit" "line" | "lmplot" | "best" "fit" | "linear" "fit" | "linear" "approxim" | "trend" "line";
+
+FilterElement		:= FilterType AuxColumn { filter_col : $1.Value }
+					| FilterCondLis;
+
+FilterType			:= "filter" "by"?
+					| "where"
+					| "when"
+					| "for";
+
+FilterCondLis		:= FilterCondLis? FilterCond;
+
+FilterCond			:= FilterOperator FilterValue { filter_v : $1.Value };
+FilterOperator		:= $operator { filter_op : $0.Value };
+FilterValue			:= $number | $quotedstring;
+
+GroupElement		:= GroupType GroupColumns
+					| GroupOperator { group_op : $0.Value };
+
+GroupType			:= "group"? "by" | "for" "each" | "for" "all" | "for" "every" | "across";
+GroupColumns		:= $auxcolumn { group_col : $0.Value };
+GroupOperator		:= $aggreop;
+
+Marker				:= "marker" | "mark";
+Line				:= "line";
+
+ColorType			:= "color";
+PreColors			:= $precolor;
+
+MarkerType			:= $markerfmt;
+LineType			:= $linefmt;
+
+Column				:= $column;
+AuxColumn			:= $auxcolumn;

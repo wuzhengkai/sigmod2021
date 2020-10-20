@@ -1,0 +1,914 @@
+﻿[
+    {
+        "Name": "Testcase 1",
+        "Query": "plot a stacked normalized distribution of fandago stars and IMDB normalized with bins of 10,20,30,40,50 .",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"IMDB_normalized\"]], bins=[10,20,30,40,50], stacked=True, density=True, label=['Fandago_stars','IMDB_normalized'])\nplt.ylabel('Normalized Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 2",
+        "Query": "plot a stacked normalized distribution of fandago stars and IMDB normalized with bins range from 10 to 20.",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"IMDB_normalized\"]], range=[10, 20], stacked=True, density=True, label=['Fandago_stars','IMDB_normalized'])\nplt.ylabel('Normalized Frequency')\nplt.legend(title='column')\n",
+		"Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 3",
+        "Query": "plot a stacked normalized distribution of fandago stars and IMDB normalized with 20 bins.",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"IMDB_normalized\"]], bins=20, stacked=True, density=True, label=['Fandago_stars','IMDB_normalized'])\nplt.ylabel('Normalized Frequency')\nplt.legend(title='column')\n",
+		"Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 4",
+        "Query": "plot a histogram of fandago",
+        "Output": "plt.hist(movies[\"Fandago_stars\"])\nplt.xlabel('Fandago_stars')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 5",
+        "Query": "plot a histogram of fandago with logarithmic y-axis.",
+        "Output": "plt.hist(movies[\"Fandago_stars\"], log=True)\nplt.xlabel('Fandago_stars')\nplt.ylabel('Logarithmic Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 6",
+        "Query": "normalized histogram of fandago ratingvalues.",
+        "Output": "plt.hist(movies[\"Fandago_Ratingvalue\"], density=True)\nplt.xlabel('Fandago_Ratingvalue')\nplt.ylabel('Normalized Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 7",
+        "Query": "20 bin histogram of fandago ratingvalues.",
+        "Output": "plt.hist(movies[\"Fandago_Ratingvalue\"], bins=20)\nplt.xlabel('Fandago_Ratingvalue')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 8",
+        "Query": "bins from 10 to 20 step 2 histogram of fandago ratingvalues.",
+        "Output": "plt.hist(movies[\"Fandago_Ratingvalue\"], bins=np.arange(10, 20.5, 2))\nplt.xlabel('Fandago_Ratingvalue')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 9",
+        "Query": "histogram fandago stars range from 5.5 to 10.5",
+        "Output": "plt.hist(movies[\"Fandago_stars\"], range=[5.5, 10.5])\nplt.xlabel('Fandago_stars')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 10",
+        "Query": "histogram fandago stars and fandago ratingvalues range from 5.5 to 10.5 while stacked.",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"Fandago_Ratingvalue\"]], range=[5.5, 10.5], stacked=True, label=['Fandago_stars','Fandago_Ratingvalue'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 11",
+        "Query": "histogram fandago stars and imdb normalized overlapping.",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"IMDB_normalized\"]], label=['Fandago_stars','IMDB_normalized'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",        
+		"Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 12",
+        "Query": "histogram fandago and imdb normal overlapping.",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"IMDB_normalized\"]], label=['Fandago_stars','IMDB_normalized'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+		"Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 13",
+        "Query": "histogram fandago and imdb normal stacked.",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"IMDB_normalized\"]], stacked=True, label=['Fandago_stars','IMDB_normalized'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 14",
+        "Query": "histogram fandago stars and imdb normalized stacked with metacritic.",
+        "Output": "plt.hist([movies[\"Fandago_stars\"],movies[\"IMDB_normalized\"],movies[\"Metacritic\"]], stacked=True, label=['Fandago_stars','IMDB_normalized','Metacritic'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 15",
+        "Query": "histogram metacritic and imdb normalized stacked with fandago ratingvalue on the side.",
+        "Output": "plt.hist([movies[\"Metacritic\"],movies[\"IMDB_normalized\"],movies[\"Fandago_Ratingvalue\"]], stacked=True, label=['Metacritic','IMDB_normalized','Fandago_Ratingvalue'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 16",
+        "Query": "histogram metacritic with imdb normalized, fandago ratingvalue",
+        "Output": "plt.hist([movies[\"Metacritic\"],movies[\"IMDB_normalized\"],movies[\"Fandago_Ratingvalue\"]], label=['Metacritic','IMDB_normalized','Fandago_Ratingvalue'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 17",
+        "Query": "density plot metacritic with imdb normalized, fandago ratingvalue",
+        "Output": "plt.hist([movies[\"Metacritic\"],movies[\"IMDB_normalized\"],movies[\"Fandago_Ratingvalue\"]], density=True, label=['Metacritic','IMDB_normalized','Fandago_Ratingvalue'])\nplt.ylabel('Normalized Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 18",
+        "Query": "normalized density plot metacritic with 20 bins",
+        "Output": "plt.hist(movies[\"Metacritic\"], bins=20, density=True)\nplt.xlabel('Metacritic')\nplt.ylabel('Normalized Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 19",
+        "Query": "Plot Rotten tomatoes' distribution range from 50 to 75.",
+        "Output": "plt.hist(movies[\"RottenTomatoes\"], range=[50, 75])\nplt.xlabel('RottenTomatoes')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 20",
+        "Query": "Plot Rotten tomatoes' distribution range from 50 to 75 in 5 bins.",
+        "Output": "plt.hist(movies[\"RottenTomatoes\"], range=[50, 75])",
+        "IgnoredReason": "range and in 5 bins not supported",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 21",
+        "Query": "Plot Rotten tomatoes and fandago stars' distribution range from 50 to 75.",
+        "Output": "plt.hist([movies[\"RottenTomatoes\"],movies[\"Fandago_stars\"]], range=[50, 75], label=['RottenTomatoes','Fandago_stars'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 22",
+        "Query": "Plot Rotten tomatoes' distribution stacking with fandago stars range from 50 to 75.",
+        "Output": "plt.hist([movies[\"RottenTomatoes\"],movies[\"Fandago_stars\"]], range=[50, 75], stacked=True, label=['RottenTomatoes','Fandago_stars'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 23",
+        "Query": "Plot Rotten tomatoes' density distribution stacking with fandago stars range from logarithmic bins.",
+        "Output": "plt.hist([movies[\"RottenTomatoes\"],movies[\"Fandago_stars\"]], log=True, stacked=True, density=True, label=['RottenTomatoes','Fandago_stars'])\nplt.ylabel('Normalized Logarithmic Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 24",
+        "Query": "Plot Metacritic and metacritic user's distribution in 6 bins.",
+        "Output": "plt.hist([movies[\"Metacritic\"],movies[\"Metacritic_User\"]], bins=6, label=['Metacritic','Metacritic_User'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 25",
+        "Query": "Plot metacritic user's distribution in 6 bins.",
+        "Output": "plt.hist(movies[\"Metacritic_User\"], bins=6)\nplt.xlabel('Metacritic_User')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "movies",
+        "Columns": [
+            "FILM",
+            "RottenTomatoes",
+            "Metacritic",
+            "Metacritic_User",
+            "Fandago_stars",
+            "Fandago_Ratingvalue",
+            "IMDB_normalized"
+        ]
+    },
+    {
+        "Name": "Testcase 26",
+        "Query": "Plot users' age distribution in 5 bins.",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=5)\nplt.xlabel('age')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 27",
+        "Query": "Plot users' age distribution in 5 bins.",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=5)\nplt.xlabel('age')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 28",
+        "Query": "Plot users' age distribution in 5 categories.",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=5)\nplt.xlabel('age')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 29",
+        "Query": "Plot users' age distribution in 5 categories and education's distribution in 4 categories.",
+        "IgnoredReason": "User's intention is ambiguous, not sure how to deal with two different categories",
+        "Output": "plt.hist([okCupidFrame[\"age\"],okCupidFrame[\"education\"]], bins=5)",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 30",
+        "Query": "Plot users' body_type and education distribution in 5 categories.",
+        "Output": "plt.hist([okCupidFrame[\"body_type\"],okCupidFrame[\"education\"]], bins=5, label=['body_type','education'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 31",
+        "Query": "histogram of user age bins from 15 to 40 step 5.",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=np.arange(15, 40.5, 5))\nplt.xlabel('age')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 32",
+        "Query": "histogram of user age bins from 15 to 65 step 10.",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=np.arange(15, 65.5, 10))\nplt.xlabel('age')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 33",
+        "Query": "histogram of user age bins from 15 to 65",
+        "Output": "plt.hist(okCupidFrame[\"age\"], range=[15, 65])\nplt.xlabel('age')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 34",
+        "Query": "histogram of user age bins in 15,20,25,30,35,40",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=[15,20,25,30,35,40])\nplt.xlabel('age')\nplt.ylabel('Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 35",
+        "Query": "histogram of user age bins in 15,20,25,30,35,40,...",
+        "IgnoredReason": "the ... style inference is not supported",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=[15,20,25,30,35,40])",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 36",
+        "Query": "histogram of user age bins in 15,20,25,...,60",
+        "IgnoredReason": "the ... style inference is not supported",
+        "Output": "plt.hist(okCupidFrame[\"age\"], bins=[15,20,25,60])",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 37",
+        "Query": "plot income and offspring distribution",
+        "Output": "plt.hist([okCupidFrame[\"income\"],okCupidFrame[\"offspring\"]], label=['income','offspring'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 38",
+        "Query": "plot income and offspring normalized distribution",
+        "Output": "plt.hist([okCupidFrame[\"income\"],okCupidFrame[\"offspring\"]], density=True, label=['income','offspring'])\nplt.ylabel('Normalized Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 39",
+        "Query": "plot income normalized distribution bins from 10000 to 500000",
+        "Output": "plt.hist(okCupidFrame[\"income\"], range=[10000, 500000], density=True)\nplt.xlabel('income')\nplt.ylabel('Normalized Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 40",
+        "Query": "plot income normalized distribution range from 10000 to 500000, with 50000 each bin",
+        "IgnoredReason": "50000 each bin is not supported bins",
+        "Output": "plt.hist(okCupidFrame[\"income\"], range=[10000, 500000], density=True)",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 41",
+        "Query": "plot income normalized distribution range from 10000 to 500000",
+        "Output": "plt.hist(okCupidFrame[\"income\"], range=[10000, 500000], density=True)\nplt.xlabel('income')\nplt.ylabel('Normalized Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 42",
+        "Query": "plot income logarithmic distribution range from 10000 to 500000",
+        "Output": "plt.hist(okCupidFrame[\"income\"], range=[10000, 500000], log=True)\nplt.xlabel('income')\nplt.ylabel('Logarithmic Frequency')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 43",
+        "Query": "plot pets logarithmic distribution stacking with offspring",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"]], log=True, stacked=True, label=['pets','offspring'])\nplt.ylabel('Logarithmic Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 44",
+        "Query": "plot pets distribution stacking with offspring",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"]], stacked=True, label=['pets','offspring'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 45",
+        "Query": "plot pets logarithmic distribution with offspring",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"]], log=True, label=['pets','offspring'])\nplt.ylabel('Logarithmic Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 46",
+        "Query": "plot pets distribution with offspring",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"]], label=['pets','offspring'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 47",
+        "Query": "plot pets distribution with offspring, in bins of 0,1,2,10",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"]], bins=[0,1,2,10], label=['pets','offspring'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 48",
+        "Query": "plot pets distribution with offspring, range from 0 to 3",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"]], range=[0, 3], label=['pets','offspring'])\nplt.ylabel('Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 49",
+        "Query": "plot pets logarithmic distribution with offspring, range from 0 to 3 step 1",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"]], bins=np.arange(0, 3.5, 1), log=True, label=['pets','offspring'])\nplt.ylabel('Logarithmic Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+    {
+        "Name": "Testcase 50",
+        "Query": "plot pets, offspring and age logarithmic distribution, in 10 bins",
+        "Output": "plt.hist([okCupidFrame[\"pets\"],okCupidFrame[\"offspring\"],okCupidFrame[\"age\"]], bins=10, log=True, label=['pets','offspring','age'])\nplt.ylabel('Logarithmic Frequency')\nplt.legend(title='column')\n",
+        "Dataframe": "okCupidFrame",
+        "Columns": [
+            "age",
+            "body_type",
+            "education",
+            "ethnicity",
+            "offspring",
+            "income",
+            "pets",
+            "height"
+        ]
+    },
+	{
+		"Name": "Testcase 51",
+		"Query": "plot a scatter plot of fandago stars and IMDB normalized.",
+		"Output": "plt.scatter(x=movies[\"Fandago_stars\"], y=movies[\"IMDB_normalized\"])\nplt.xlabel('Fandago_stars')\nplt.ylabel('IMDB_normalized')\n",
+		"Dataframe": "movies",
+		"Columns": [
+			"FILM",
+			"RottenTomatoes",
+			"Metacritic",
+			"Metacritic_User",
+			"Fandago_stars",
+			"Fandago_Ratingvalue",
+			"IMDB_normalized"
+		]
+	},
+	{
+		"Name": "Testcase 52",
+		"Query": "plot a scatter plot of fandago stars and IMDB normalized using white marker.",
+		"Output": "plt.scatter(x=movies[\"Fandago_stars\"], y=movies[\"IMDB_normalized\"], c='w')\nplt.xlabel('Fandago_stars')\nplt.ylabel('IMDB_normalized')\n",
+		"Dataframe": "movies",
+		"Columns": [
+			"FILM",
+			"RottenTomatoes",
+			"Metacritic",
+			"Metacritic_User",
+			"Fandago_stars",
+			"Fandago_Ratingvalue",
+			"IMDB_normalized"
+		]
+	},
+
+	{
+		"Name": "Testcase 53",
+		"Query": "plot a scatter plot of elo98 and elo15 filter by gdp06 less than 15000 using red marker.",
+		"Output": "df_t = soccer.loc[soccer[\"gdp06\"] < 15000]\nplt.scatter(x=df_t[\"elo98\"], y=df_t[\"elo15\"], c='r', label='< 15000')\nplt.xlabel('elo98')\nplt.ylabel('elo15')\nplt.legend(title='gdp06')\n",
+		"Dataframe": "soccer",
+		"Columns": [
+			"elo98",
+			"elo15",
+			"gdp06",
+			"popu06",
+			"confederation",
+		]
+	},
+
+	{
+		"Name": "Testcase 54",
+		"Query": "plot a scatter plot of elo98 and elo15 filter by gdp06 not less than 15000 using yellow marker.",
+		"Output": "df_t = soccer.loc[soccer[\"gdp06\"] >= 15000]\nplt.scatter(x=df_t[\"elo98\"], y=df_t[\"elo15\"], c='y', label='>= 15000')\nplt.xlabel('elo98')\nplt.ylabel('elo15')\nplt.legend(title='gdp06')\n",
+		"Dataframe": "soccer",
+		"Columns": [
+			"elo98",
+			"elo15",
+			"gdp06",
+			"popu06",
+			"confederation",
+		]
+	},
+
+	{
+		"Name": "Testcase 55",
+		"Query": "plot a scatter plot of elo98 and elo15 filter by gdp06 less than 15000 using red marker; plot a scatter plot of elo98 and elo15 filter by gdp06 not less than 15000 using yellow marker.",
+		"Output": "df_t = soccer.loc[soccer[\"gdp06\"] < 15000]\nplt.scatter(x=df_t[\"elo98\"], y=df_t[\"elo15\"], c='r', label='< 15000')\nplt.xlabel('elo98')\nplt.ylabel('elo15')\nplt.legend(title='gdp06')\n\ndf_t = soccer.loc[soccer[\"gdp06\"] >= 15000]\nplt.scatter(x=df_t[\"elo98\"], y=df_t[\"elo15\"], c='y', label='>= 15000')\nplt.xlabel('elo98')\nplt.ylabel('elo15')\nplt.legend(title='gdp06')\n",
+		"Dataframe": "soccer",
+		"Columns": [
+			"elo98",
+			"elo15",
+			"gdp06",
+			"popu06",
+			"confederation",
+		]
+	},
+
+	{
+		"Name": "Testcase 76",
+		"Query": "plot a scatter plot of average elo98 and elo15 group by confederation",
+		"Output": "df_tt = soccer.groupby(['confederation']).mean().groupby(['confederation'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"elo98\"], y=df_tt2[\"elo15\"], label=str(cc))\nplt.xlabel('elo98')\nplt.ylabel('mean elo15')\nplt.legend(title='confederation')\n",
+		"Dataframe": "soccer",
+		"Columns": [
+			"elo98",
+			"elo15",
+			"gdp06",
+			"popu06",
+			"confederation",
+		]
+	},
+
+	{
+		"Name": "Testcase 101",
+		"Query": "plot a line graph of fandago stars and IMDB normalized using white marker.",
+		"Output": "plt.plot(movies[\"Fandago_stars\"], movies[\"IMDB_normalized\"], 'w')\nplt.xlabel('Fandago_stars')\nplt.ylabel('IMDB_normalized')\n",
+		"Dataframe": "movies",
+		"Columns": [
+			"FILM",
+			"RottenTomatoes",
+			"Metacritic",
+			"Metacritic_User",
+			"Fandago_stars",
+			"Fandago_Ratingvalue",
+			"IMDB_normalized"
+		]
+	},
+
+	{
+		"Name": "Testcase 102",
+		"Query": "plot a line graph of fandago stars and IMDB normalized using white marker and dash-dot line.",
+		"Output": "plt.plot(movies[\"Fandago_stars\"], movies[\"IMDB_normalized\"], '-.w')\nplt.xlabel('Fandago_stars')\nplt.ylabel('IMDB_normalized')\n",
+		"Dataframe": "movies",
+		"Columns": [
+			"FILM",
+			"RottenTomatoes",
+			"Metacritic",
+			"Metacritic_User",
+			"Fandago_stars",
+			"Fandago_Ratingvalue",
+			"IMDB_normalized"
+		]
+	},
+
+	{
+		"Name": "Testcase 103",
+		"Query": "plot line chart of average elo15 group by confederation",
+		"Output": "df_tt = soccer.groupby(['confederation']).mean().reset_index()\nplt.plot(df_tt[\"confederation\"], df_tt[\"elo15\"])\nplt.xlabel('confederation')\nplt.ylabel('mean elo15')\n",
+		"Dataframe": "soccer",
+		"Columns": [
+			"elo98",
+			"elo15",
+			"gdp06",
+			"popu06",
+			"confederation",
+		]
+	},
+]

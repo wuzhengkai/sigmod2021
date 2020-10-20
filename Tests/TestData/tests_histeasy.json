@@ -1,0 +1,2420 @@
+﻿[
+	{
+		"Name": "Testcase 1_01",
+		"Query": "show me histogram of MPG",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_02",
+		"Query": "plot a bar graph that shows me the number of rows with MPG in range 5 to 10, 10 to 15, and so on. ",
+		"Output": "plt.hist(df[\"mpg\"], bins=[10,10,15])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_03",
+		"Query": "show the histogram of MPG in the given data set",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_04",
+		"Query": "Histogram of MPG",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_06.1",
+		"Query": "plot the distribution of mpg ",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_06.2",
+		"Query": "mpg histogram ",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_07",
+		"Query": "Show me a histogram for frequencies of MPG, with bin sizes of 5, in the range of 5 to 45 MPG",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(5, 45.5, 5))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_08",
+		"Query": "Plot a histogram of mpg with bin width 5. ",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 5))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_09",
+		"Query": "plot histogram of mpg",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_10",
+		"Query": "plot histogram of mpg between 5 and 45 with bin size 5",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(5, 45.5, 5))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_11",
+		"Query": "histogram of mpg width 5",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 5))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_12",
+		"Query": "histogram of MPG with bucket size of 5",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 5))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_13",
+		"Query": "bar chart of MPG frequency",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_14",
+		"Query": "horsepower distribution",
+		"Output": "plt.hist(df[\"horsepower\"])\nplt.xlabel('horsepower')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_15",
+		"Query": "histogram mpg",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_16",
+		"Query": "Counts of MPG with bins of size 5 starting at 5",
+		"Output": "plt.hist(df[\"mpg\"], range=[5, 5])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_01",
+		"Query": "show me histogram of MPG from 10 to 40",
+		"Output": "plt.hist(df[\"mpg\"], range=[10, 40])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_02",
+		"Query": "plot a bar graph that shows me the number of rows with MPG in range 5 to 10, 10 to 15, and so on. ",
+		"Output": "plt.hist(df[\"mpg\"], bins=[10,10,15])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_03",
+		"Query": "Histogram of MPG between 10 and 40 in bins of 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_04",
+		"Query": "histogram for MPG aggregated over 10 mpg intervals",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_06",
+		"Query": "Plot number of mpg for each 5 interval",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 5))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_07",
+		"Query": "Show me a histogram for frequencies of MPG, with bin sizes of 10, in the range of 10 to 40 MPG",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_08",
+		"Query": "Plot a histogram of mpg with bin width 10.",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_09",
+		"Query": "plot histogram of mpg with step 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_10",
+		"Query": "plot histogram of mpg between 10 and 40 with bin size 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_11",
+		"Query": "histogram of mpg width 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_12",
+		"Query": "histogram of MPG with bucket size of 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_13",
+		"Query": "bar chart of MPG frequency",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_14",
+		"Query": "mpg frequency ",
+		"Output": "plt.hist(df[\"mpg\"])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_15",
+		"Query": "histogram mpg width 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_16",
+		"Query": "Counts of MPG with bins of size 10 starting at 10",
+		"Output": "plt.hist(df[\"mpg\"], range=[10, 10])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_01",
+		"Query": "show me normalized histogram of MPG from 10 to 40",
+		"Output": "plt.hist(df[\"mpg\"], range=[10, 40], density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_02",
+		"Query": "draw a bar graph which shows the pertentage of rows with MPG in range 10 to 20, 20 to 30, and so on.",
+		"Output": "plt.hist(df[\"mpg\"], bins=[10,20,20])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_03",
+		"Query": "Histogram of MPG between 10 and 40 in bins of 10 with normed frequency",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_04",
+		"Query": "histogram showing MPG with width 10 mpg and bar lengths normalized",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_06",
+		"Query": "Plot the normalized frequency of mpg with bucket size 5",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 5), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 3_07",
+		"Query": "histogram for normed frequencies of MPG, with bin sizes of 10, in the range of 10 to 40 MPG",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 3_08",
+		"Query": "Plot a histogram of mpg with bin width 10. Normalize the y-axis to sum to 0.1",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 0.1), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_09",
+		"Query": "plot normed histogram of mpg with step 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_10",
+		"Query": "plot normed histogram of mpg between 10 and 40 with bin size 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_11",
+		"Query": "histogram of mpg width 10 normed",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_12",
+		"Query": "normalized histogram of MPG with bucket size of 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_13",
+		"Query": "bar chart of MPG frequency normalized",
+		"Output": "plt.hist(df[\"mpg\"], density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_15",
+		"Query": "normed histogram mpg width 10",
+		"Output": "plt.hist(df[\"mpg\"], bins=np.arange(9, 47.1, 10), density=True)\nplt.xlabel('mpg')\nplt.ylabel('Normalized Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 3_16",
+		"Query": "Relative Frequency of MPG with bins of size 10 starting at 10",
+		"Output": "plt.hist(df[\"mpg\"], range=[10, 10])\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_01",
+		"Query": "show me histogram of cylinders",
+		"Output": "plt.hist(df[\"cylinders\"])\nplt.xlabel('cylinders')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_02",
+		"Query": "Show me the count of rows with 3 cylinders, 4 cylinders, and so on. Plot a bar graph.",
+		"Output": "plt.hist(df[\"cylinders\"], bins=3)\nplt.xlabel('cylinders')\nplt.ylabel('Frequency')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_03",
+		"Query": "Histogram of cylinders with Log frequency",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 4_04",
+		"Query": "histogram of cyliners where the bar lengths are in logscale",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_06",
+		"Query": "Plot logscale histogram of cylinders",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 4_07",
+		"Query": "Show me a histogram for log frequencies of cylinders",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 4_08",
+		"Query": "Plot a histogram of cylinders with bin width 1. Use log scale for the y-axis.",
+		"Output": "plt.hist(df[\"cylinders\"], bins=np.arange(3, 8.5, 1), log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_09",
+		"Query": "plot bar char of cylindres, log scale",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_10",
+		"Query": "plot log bar of cylinders",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_11",
+		"Query": "histogram cylinders log frequency",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_12",
+		"Query": "log-scale histogram of cylinders",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_13",
+		"Query": "bar chart of cylinders frequency at logarithmic scale",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_15",
+		"Query": "logarithm histogram cylinders",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 4_16",
+		"Query": "Log Counts of Cylinders ",
+		"Output": "plt.hist(df[\"cylinders\"], log=True)\nplt.xlabel('cylinders')\nplt.ylabel('Logarithmic Frequency')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+]

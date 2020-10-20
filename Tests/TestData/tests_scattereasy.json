@@ -1,0 +1,1231 @@
+﻿[
+	{
+		"Name": "Testcase 1_01",
+		"Query": "scatter plot of mpg by acceleration",
+		"Output": "df_tt = df.groupby(['acceleration']).mean().reset_index()\nplt.scatter(x=df_tt[\"acceleration\"], y=df_tt[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_02",
+		"Query": "scatter plot of mpg by acceleration ",
+		"Output": "df_tt = df.groupby(['acceleration']).mean().reset_index()\nplt.scatter(x=df_tt[\"acceleration\"], y=df_tt[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_04",
+		"Query": "Plot acceleration versus mpg using a dot for each data point",
+		"Output": "plt.plot(df[\"acceleration\"], df[\"mpg\"], '.')\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_05",
+		"Query": "for each mpg and acceleration, plot a point ",
+		"Output": "df_tt = df.groupby(['mpg']).mean().reset_index()\nplt.scatter(x=df_tt[\"mpg\"], y=df_tt[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_06",
+		"Query": "Show a scatter chart of acceleration vs mpg ",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_07",
+		"Query": "Scatter plot of acceleration against mpg",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 1_08",
+		"Query": "Show a scatterplot of mpg vs acceleration.",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_09",
+		"Query": "plot scatter of mpg and acceleration",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_10",
+		"Query": "plot scatter of mpg and acceleration",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_11",
+		"Query": "scatter mpg acceleration",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_12",
+		"Query": "scatterplot of MPG vs. acceleration",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_13",
+		"Query": "scatter acceleration  vs. mpg",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_14",
+		"Query": "scatter of acceleration and mpg",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_15",
+		"Query": "point acceleration against mpg",
+		"Output": "plt.plot(df[\"acceleration\"], df[\"mpg\"], '.')\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 1_16",
+		"Query": "Scatterplot of acceleration vs mpg",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_01",
+		"Query": "plot mpg versus acceleration. point sizes should be by cylinder.",
+		"Output": "df_tt = df.groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.hist(df_tt2[\"mpg\"], alpha=0.5, label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('Frequency')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Incorrect",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_02",
+		"Query": "scatter plot of mpg by acceleration where points are the size by cylinder",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().reset_index()\nplt.scatter(x=df_tt[\"cylinders\"], y=df_tt[\"mpg\"], s=df_tt[\"acceleration\"])\nplt.xlabel('cylinders')\nplt.ylabel('mean mpg')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_04",
+		"Query": "Plot acceleration vs mpg using a point for each row whose size depends on the cylinder column",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.plot(df_tt2[\"acceleration\"], df_tt2[\"mpg\"], '.', label=str(cc))\nplt.xlabel('acceleration')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_05",
+		"Query": "for each mpg and acceleration, plot a point ",
+		"Output": "df_tt = df.groupby(['mpg']).mean().reset_index()\nplt.scatter(x=df_tt[\"mpg\"], y=df_tt[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_06",
+		"Query": "Scattergram of acceleration vs mpg",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_07",
+		"Query": "Scatter plot of acceleration against mpg and make the size of the points proportional to the number of cylinders.",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Basic",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+		{
+		"Name": "Testcase 2_08",
+		"Query": "Show a scatterplot of mpg vs acceleration grouped by cylinder, point size by cylinder.",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"mpg\"], y=df_tt2[\"acceleration\"], s=df_tt2[\"cylinders\"], label=str(cc))\nplt.xlabel('mpg')\nplt.ylabel('mean acceleration')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_09",
+		"Query": "plot scatter of mpg and acceleration with cylinder marker size",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"], s=df[\"cylinders\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_10",
+		"Query": "plot scatter of mpg and acceleration with marker size of cylinder",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"], s=df[\"acceleration\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_11",
+		"Query": "scatter mpg acceleration point size cylinder",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"mpg\"], s=df[\"acceleration\"])\nplt.xlabel('cylinders')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_12",
+		"Query": "scatterplot of MPG vs. acceleration",
+		"Output": "plt.scatter(x=df[\"mpg\"], y=df[\"acceleration\"])\nplt.xlabel('mpg')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_13",
+		"Query": "scatter acceleration  vs. mpg",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Almost Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_14",
+		"Query": "scatterplot of MPG vs. acceleration with points different sizes based on cylinders ",
+		"Output": "plt.scatter(x=df[\"cylinders\"], y=df[\"acceleration\"])\nplt.xlabel('cylinders')\nplt.ylabel('acceleration')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Novice",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_15",
+		"Query": "point size by cylinder of acceleration and mpg",
+		"Output": "df_tt = df.groupby(['cylinders']).mean().groupby(['cylinders'])\nfor cc, df_tt1 in df_tt:\n    df_tt2 = df_tt1.reset_index()\n    plt.scatter(x=df_tt2[\"acceleration\"], y=df_tt2[\"mpg\"], label=str(cc))\nplt.xlabel('acceleration')\nplt.ylabel('mean mpg')\nplt.legend(title='cylinders')\n",
+		"ResultCategory": "Somehow Correct",
+		"Level": "Intermediate",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+
+	{
+		"Name": "Testcase 2_16",
+		"Query": "Scatterplot of acceleration and mpg, using marker size cylinders",
+		"Output": "plt.scatter(x=df[\"acceleration\"], y=df[\"mpg\"], s=df[\"cylinders\"])\nplt.xlabel('acceleration')\nplt.ylabel('mpg')\n",
+		"ResultCategory": "Correct",
+		"Level": "Advanced",
+		"Dataframe": "df",
+		"Columns": [
+			"mpg",
+			"cylinders",
+			"model_year",
+			"origin",
+			"horsepower",
+			"acceleration"
+		],
+		"Types": [
+			"float64",
+			"int64",
+			"int64",
+			"int64",
+			"object",
+			"float64"
+		],
+		"Min": [
+			"9.0",
+			"3",
+			"70",
+			"1",
+			"0",
+			"8.0"
+		],
+		"Max": [
+			"46.6",
+			"8",
+			"82",
+			"3",
+			"0",
+			"24.8"
+		]
+	},
+]

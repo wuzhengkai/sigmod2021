@@ -1,0 +1,686 @@
+﻿[
+    {
+        "Name": "Testcase Anna_1",
+        "Query": "show me histogram of MPG",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+    
+    {
+        "Name": "Testcase Xinyu_1",
+        "Query": "plot a bar graph that shows me the number of rows with MPG in range 5 to 10, 10 to 15, and so on.",
+        "Output": "plt.hist(df[\"mpg\"], bins=[10,10,15])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Incorrect"
+    },
+
+    {
+        "Name": "Testcase Gustavo_1",
+        "Query": "Histogram of MPG",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Ashish_1",
+        "Query": "show the histogram for MPG in the given data set",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Vu_1.1",
+        "Query": "plot frequency of MPG",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Vu_1.2",
+        "Query": "plot histogram of MPG",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Vu_1.3",
+        "Query": "MPG histogram",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Vu_1.4",
+        "Query": "plot MPG",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Arjun_1.1",
+        "Query": "plot the distribution of mpg",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Arjun_1.2",
+        "Query": "mpg histogram",
+        "Output": "plt.hist(df[\"mpg\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Anna_2",
+        "Query": "show me histogram of MPG from 10 to 40",
+        "Output": "plt.hist(df[\"mpg\"], range=[10, 40])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost correct"
+    },
+
+    {
+        "Name": "Testcase Xinyu_2",
+        "Query": "a bar graph showing the number of rows with MPG in range 10 to 20, 20 to 30, and so on. ",
+        "Output": "plt.hist(df[\"mpg\"], bins=30)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Somehow correct"
+    },
+
+    {
+        "Name": "Testcase Gustavo_2",
+        "Query": "Histogram of MPG between 10 and 40 in bins of 10.",
+        "Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10))",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Ashish_2",
+        "Query": "histogram for MPG aggregated over 10 mpg intervals.",
+        "Output": "plt.hist([df[\"mpg\"],df[\"mpg\"]], bins=10)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Incorrect"
+    },
+
+    {
+        "Name": "Testcase Vu_2.1",
+        "Query": "plot MPG from 10 to 40.",
+        "Output": "plt.hist(df[\"mpg\"], range=[10, 40])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost Correct"
+    },
+
+    {
+        "Name": "Testcase Vu_2.2",
+        "Query": "histogram MPG 10 to 50 size 10.",
+        "Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 50.5, 10))",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Vu_2.3",
+        "Query": "plot histogram of MPG 10 - 40",
+        "Output": "plt.hist(df[\"mpg\"], range=[10, 40])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost Correct"
+    },
+
+    {
+        "Name": "Testcase Arjun_2",
+        "Query": "Plot number of records for each 5 mpg interval",
+        "Output": "plt.hist(df[\"mpg\"], bins=5)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Somehow Correct"
+    },
+
+    {
+        "Name": "Testcase Anna_3",
+        "Query": "show me normalized histogram of MPG from 10 to 40",
+        "Output": "plt.hist(df[\"mpg\"], range=[10, 40], density=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Xinyu_3",
+        "Query": "draw a bar graph which shows the pertentage of rows with MPG in range 10 to 20, 20 to 30, and so on.",
+        "Output": "plt.hist(df[\"mpg\"], bins=[20,20,30])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Somehow Correct"
+    },
+
+    {
+        "Name": "Testcase Gustavo_3",
+        "Query": "Histogram of MPG between 10 and 40 in bins of 10 with normed frequency",
+        "Output": "plt.hist(df[\"mpg\"], bins=np.arange(10, 40.5, 10), density=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Ashish_3",
+        "Query": "histogram showing MPG with width 10 mpg and bar lengths normalized",
+        "Output": "plt.hist(df[\"mpg\"], bins=10, density=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Somehow Correct"
+    },
+
+    {
+        "Name": "Testcase Vu_3.1",
+        "Query": "plot MPG histogram 10 - 40 normalize frequency",
+        "Output": "plt.hist(df[\"mpg\"], bins=40, density=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Somehow Correct"
+    },
+
+    {
+        "Name": "Testcase Vu_3.2",
+        "Query": "plot normalized frequency of MPG from 10 to 40",
+        "Output": "plt.hist(df[\"mpg\"], range=[10, 40], density=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Vu_3.3",
+        "Query": "MPG normalized frequency range 10 40",
+        "Output": "plt.hist(df[\"mpg\"], range=[10, 40], density=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Arjun_3",
+        "Query": "Plot the normalized frequency of mpg with bucket size 5",
+        "Output": "plt.hist(df[\"mpg\"], bins=5, density=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Somehow Correct"
+    },
+
+    {
+        "Name": "Testcase Anna_4",
+        "Query": "show me histogram of cylinders",
+        "Output": "plt.hist(df[\"cylinders\"])",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Almost Correct"
+    },
+
+    {
+        "Name": "Testcase Xinyu_4",
+        "Query": "Show me the count of rows with 3 cylinders, 4 cylinders, and so on. Plot a bar graph.",
+        "Output": "plt.hist([df[\"cylinders\"],df[\"cylinders\"]], bins=4)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Incorrect"
+    },
+
+    {
+        "Name": "Testcase Gustavo_4",
+        "Query": "Histogram of cylinders with Log frequency .",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Ashish_4",
+        "Query": "histogram for the number of cyliners where the bar lengths are in log scale",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Vu_4.1",
+        "Query": "plot log frequency of cylinders",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Vu_4.2",
+        "Query": " cylinders log frequency",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Arjun_4",
+        "Query": "Plot logscale histogram of cylinders",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Anna_5",
+        "Query": "show me histogram of MPG, grouped by cylinders",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Xinyu_5",
+        "IgnoredReason" : "too long",
+        "Query": "show me the count of rows with 4 cylinders and with MPG in range 15 to 20, 20 to 25, and so on. Y axis is the count. X axis is the MPG range. Also do the same for 6 cylinders. Put them in the same graph where bars for 4 cylinders have color blue and bars for 6 cynlinders have color orange. plot the bars for 4 and 6 cylinders side by side. ",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+
+    {
+        "Name": "Testcase Gustavo_5",
+        "Query": "histogram of MPG by cylinders ",
+        "Output": "plt.hist(df[\"cylinders\"], log=True)",
+        "Dataframe": "df",
+        "Columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "model_year",
+            "origin",
+            "name"
+        ],
+        "_comment": "Correct"
+    },
+]
